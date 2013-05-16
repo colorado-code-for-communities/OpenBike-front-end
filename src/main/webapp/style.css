@@ -62,7 +62,7 @@ h1,h2,h3,h4,h5,h6 {
   margin-bottom: 0.25em;
   text-shadow: -1px 1px #fff;
 }
-h1 { font-size: 2em; }
+h1 { font-size: 1.9em; }
 h2 { font-size: 1.75em; }
 h3 { font-size: 1.5em; }
 h4 { font-size: 1.5em; color: #666;}
@@ -181,136 +181,20 @@ body {
 /* the logo */
 #logo {
   position: absolute;
-  top: 2.5em;
-  right: 0;
-  margin-top: -15px;
+  top: 0;
+  left: 0;
   overflow: hidden;
-  padding: 10px 0 18px 3.5em;
+  padding: 2px 0 0px 1em;
   z-index: 2;
 }
-#logo .ribbon {
-  position: relative;
-  height: 5em;
-  right: -10px;
-  padding: 0 10px 0 1.5em;
-  border-top: 1px solid #529be6;
-  border-bottom: 1px solid #2a65a1;
-
-  background-color: #68aff7;
-
-  background-image: linear-gradient(bottom, rgb(86,162,238) 0%, rgb(120,185,255) 100%);
-  background-image: -o-linear-gradient(bottom, rgb(86,162,238) 0%, rgb(120,185,255) 100%);
-  background-image: -moz-linear-gradient(bottom, rgb(86,162,238) 0%, rgb(120,185,255) 100%);
-  background-image: -webkit-linear-gradient(bottom, rgb(86,162,238) 0%, rgb(120,185,255) 100%);
-  background-image: -ms-linear-gradient(bottom, rgb(86,162,238) 0%, rgb(120,185,255) 100%);
-
-  background-image: -webkit-gradient(
-  	linear,
-  	left bottom,
-  	left top,
-  	color-stop(0, rgb(86,162,238)),
-  	color-stop(1, rgb(120,185,255))
-  );
-
-     -moz-box-shadow: inset -2px 1px 1px rgba(255,255,255,0.5);
-  -webkit-box-shadow: inset -2px 1px 1px rgba(255,255,255,0.5);
-          box-shadow: inset -2px 1px 1px rgba(255,255,255,0.5);
-}
-#logo .ribbon:before,
-#logo .ribbon:after { 
-  content: "\0020";
-  display: block; 
-	width: 100%; 
-	height: 100%; 
-  position: absolute;
-  top: -1px;
-  right: -1px;
-  z-index: -1;
-  border: 1px solid #2a65a1;
-  border-top: 1px solid #529be6;
-  border-left: 2px solid #498fd7;
-
-  background-color: #68aff7;
-
-  background-image: linear-gradient(bottom, rgb(86,162,238) 0%, rgb(120,185,255) 100%);
-  background-image: -o-linear-gradient(bottom, rgb(86,162,238) 0%, rgb(120,185,255) 100%);
-  background-image: -moz-linear-gradient(bottom, rgb(86,162,238) 0%, rgb(120,185,255) 100%);
-  background-image: -webkit-linear-gradient(bottom, rgb(86,162,238) 0%, rgb(120,185,255) 100%);
-  background-image: -ms-linear-gradient(bottom, rgb(86,162,238) 0%, rgb(120,185,255) 100%);
-
-  background-image: -webkit-gradient(
-  	linear,
-  	left bottom,
-  	left top,
-  	color-stop(0, rgb(86,162,238)),
-  	color-stop(1, rgb(120,185,255))
-  );
-
-          transform: skew(45deg,0deg);
-      -ms-transform: skew(45deg,0deg);
-  -webkit-transform: skew(45deg,0deg);
-       -o-transform: skew(45deg,0deg);
-     -moz-transform: skew(45deg,0deg);
-
-     -webkit-border-radius: 8px;
-        -moz-border-radius: 8px;
-             border-radius: 8px;
-
-     -moz-box-shadow: -5px 0 15px rgba(0, 0, 0, 0.25), inset 0 1px 1px rgba(255,255,255,0.5);
-  -webkit-box-shadow: -5px 0 15px rgba(0, 0, 0, 0.25), inset 0 1px 1px rgba(255,255,255,0.5);
-          box-shadow: -5px 0 15px rgba(0, 0, 0, 0.25), inset 0 1px 1px rgba(255,255,255,0.5);
-}
-#logo .ribbon:after {
-  padding-right: 6em;
-  right: -6em;
-  margin-right: -1px;
-  border-left: 2px solid #498fd7;
-          transform: skew(-45deg,0deg);
-      -ms-transform: skew(-45deg,0deg);
-  -webkit-transform: skew(-45deg,0deg);
-       -o-transform: skew(-45deg,0deg);
-     -moz-transform: skew(-45deg,0deg);
-
-        -moz-box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.25), inset 1px 1px 1px rgba(255,255,255,0.5);
-     -webkit-box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.25), inset 1px 1px 1px rgba(255,255,255,0.5);
-             box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.25), inset 1px 1px 1px rgba(255,255,255,0.5);
+#logo img {
+  height:18px;
 }
 
-#site-title {
-  font-family: 'Dancing Script', cursive;
-  font-size: 3.25em;
-  margin: -0.2em 20px 0 0;
-  line-height: 1;
-}
-#site-title a {
-  text-decoration: none;
-  color: #fff;
-  text-shadow: -1px -1px 1px rgba(42,101,161,0.25),
-               -1px  1px 1px rgba(42,101,161,0.25),
-                1px -1px 1px rgba(42,101,161,0.25),
-                1px  1px 1px rgba(42,101,161,0.25)
-}
-#site-title a:hover {
-  text-shadow: -1px -1px 1px rgba(42,101,161,0.5),
-               -1px  1px 1px rgba(42,101,161,0.75),
-                1px -1px 1px rgba(42,101,161,0.25),
-                1px  1px 1px rgba(42,101,161,0.5)
-}
-#site-description {
-  color: #dfeefd;
-  font-size: 1em;
-  margin: 0 20px 0 0;
-  text-shadow: -1px -1px 1px rgba(42,101,161,0.25),
-               -1px  1px 1px rgba(42,101,161,0.25),
-                1px -1px 1px rgba(42,101,161,0.25),
-                1px  1px 1px rgba(42,101,161,0.25)
-}
 
 /* AddThis */
 #branding .addthis_toolbox {
-  margin: 0.5em 0 0 0.5em;
-  float: left;
-  min-width: 163px;
+  display:none;
 }
 
 /* Navigation: Main Menu */
@@ -535,19 +419,20 @@ ul.otp-stats li strong {
 
 p#splash-text {
   position: absolute;
-  top: 6.75em;
+  top: 3.75em;
   right: 0;
   line-height: 1.5;
-  font-weight: bold;
+  font-weight: normal;
   text-align: left;
   padding: 1em 1.25em;
-  color: #444;
-  text-shadow: -1px 1px #fff;
-  background-color: #9ad5ea;
-  background-color: rgba(154,213,234,0.85);
-  border-left: 1px solid #7ab1c5;
-  border-top: 1px solid #8bc9de;
-  border-bottom: 1px solid #699bac;
+  color: #fff;
+  text-shadow: 1px 1px 6px #a8a8a8;
+  filter: dropshadow(color=#a8a8a8, offx=1, offy=1);
+  background-color: #f5c72b;
+  background-color: rgba(218, 195, 32, 0.85);;
+  border-left: 1px solid #a78f3c;
+  border-top: 1px solid #c0a139;
+  border-bottom: 1px solid #c09028;
   z-index: 1;
      -webkit-border-top-left-radius: 3px;
   -webkit-border-bottom-left-radius: 3px;
@@ -589,20 +474,12 @@ p#splash-text span {
     top: 4em;
   }
   #logo {
-    right: 0;
-    top: 4em;
+    left: 0;
+    top: .45em;
   }
-  #logo .ribbon {
-    height: 6em;
-    padding: 0 1.5em 0 2em;
+  #logo img {
+    height:35px;
   }
-  #site-title {
-    font-size: 4.25em;
-  }
-  #site-description {
-    font-size: 1.25em;
-  }
-
   /* Navigation: Main Menu */
   #main-menu {
     padding: 1em;
@@ -614,7 +491,10 @@ p#splash-text span {
 
   /* AddThis */
   #branding .addthis_toolbox {
-    margin: 1.25em 0 0 1.25em;
+    display:block;
+    margin: 1.2em 0 0 0.5em;
+    float: right;
+    min-width: 163px;
   }
 
   /* Map UI */
@@ -763,7 +643,7 @@ p#splash-text span {
   }
 
   p#splash-text {
-    top: 7.5em;
+    top: 4.5em;
     font-size: 1.2em;
   }
 
