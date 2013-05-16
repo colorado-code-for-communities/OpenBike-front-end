@@ -191,16 +191,16 @@ otp.modules.bikeshare.BikeShareModule =
                         polyline.setStyle({ color : this_.getModeColor(itin.legs[i].mode), weight: 8});
                         this_.pathLayer.addLayer(polyline);
                         if(itin.legs[i].mode === 'BICYCLE') {
-                        	polyline.bindPopup('Your CiBi route!')
+                        	polyline.bindPopup('Your B-Cycle route!')
                             var start_and_end_stations = this_.getStations(polyline.getLatLngs()[0], polyline.getLatLngs()[polyline.getLatLngs().length-1]);
                         }
                         
                         if(i == 0) {
-                        	polyline.bindPopup('Walk to the CiBi dock.')
+                        	polyline.bindPopup('Walk to the B-Cycle dock.')
                         }
                         
                         if(i == 2) {
-                        	polyline.bindPopup('Walk from the CiBi dock to your destination.')
+                        	polyline.bindPopup('Walk from the CiBi B-Cycle to your destination.')
                         }
                     }
                     this_.resultsWidget.updateMetrics(itin);
@@ -386,13 +386,14 @@ otp.modules.bikeshare.BikeShareModule =
     createAboutInfo : function() {
     	this.contactWidget = new otp.widgets.InfoWidget("otp-contactWidget");
 
-		var contactCopy = '<p>Comments? Reach us <a href="http://twitter.com/openplans">@OpenPlans</a> or <a href="http://openplans.org/contact">send us a message</a> via our website. </p><p>Read more about <a href="http://openplans.org/?p=9892">cibi.me</a>.</p><p>For more information about NYC&apos;s bike share, visit <a href="http://citibikenyc.com/">Citi Bike</a> and <a href="http://nyc.gov/bikeshare">nyc.gov/bikeshare</a>.</p><p>cibi.me is a project from <a href="http://openplans.org/">OpenPlans</a>.</p><p style="text-align:center;margin:2em;"><a href="http://openplans.org/"><img src="images/openplans-logo-gray.gif" /></a></p>';
+		var contactCopy = '<link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css"><style type="text/css">#mc_embed_signup{clear:left;} #mc_embed_signup form {width:100%;} #mc_embed_signup input.email {width:100%;}</style><div id="mc_embed_signup"><form action="http://lockdev.us6.list-manage.com/subscribe/post?u=b417df99a06d1a981d3dc5819&amp;id=1f2531050b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate><label for="mce-EMAIL">Subscribe to our mailing list</label><input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required><div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div></form></div><p><a href=\"mailto:michael@lockdev.com\">Email us</a></p><p><a href="https://twitter.com/intent/user?screen_name=MikeLockz">Follow @MikeLockz</a></p>';
 
 		this.contactWidget.setContent("<p class='title'>Contact</p>" + contactCopy);
 		this.contactWidget.hide();
     	
+        var aboutCopy = '<h1>OpenBike is getting more awesome</h1><h2>Check out our demo, signup for news</h2><p>OpenBike provides cyclists with more information about their bike routes.  OpenBike collects information about bike routes on qualitative measures such as route safety, difficulty, and scenery from riders. In addition, the map shows bike accident and theft data from local agencies like the police and transportation departments. All the information is easily accessed on the map showing the areas to avoid and the secret routes you never knew. OpenBike is an interactive mapping platform that allows Front Range riders to view and provide meaningful feedback about the quality of a bike route in their community.</p><p>OpenBike was first launched at the Denver Code4Communities Hackathon as part of Code for America. Originally named RadRoutes, OpenBike\'s goal is to crowdsource discovery of the best bike routes for cyclists and provide useful information for route planning to governments. The team created a winning app for the event and has continued to build out the project since then with the help of a community of volunteers.</p><h3>Coming soon</h3><ul><li>Bike route information for the entire front range</li><li>Custom route creation</li><li>Social sharing of your routes</li><li>Mobile version</li></ul><p>Open Bike is under active development. Signup with your email or <a href=\"mailto:michael@lockdev.com\">contact us directly</a> to stay informed about features and releases.</p>';
         this.aboutWidget = new otp.widgets.InfoWidget("otp-aboutWidget");
-		this.aboutWidget.setContent('<p><strong>Bike share is coming to NYC this summer!</strong> How will you use it to get around?</p><img src="http://www.streetsblog.org/wp-content/uploads/2012/05/IMAG0391.jpg"/><p>CiBi.me is a trip planner for bike share. Pick your start and end points, and we\'ll tell you how to make the trip with a <a href="">Citi Bike</a>. Including, where to pick up a bike and where to drop it off, and alternative docks nearby. When the system is running this summer, cibi.me will check to see if bikes and docks are available before recommending a route. For now, we&apos;re using draft station locations from NYC DOT.</p><p>Soon, Citi Bike will make all sorts of short trips quicker and easier. With CiBi.me, you can start planning those trips today!</p><p>cibi.me is a project from OpenPlans, powered by OpenTripPlanner and using OpenStreetMap data. Proposed station data from <a href="http://nyc.gov/bikeshare/">nyc.gov/bikeshare</a>. Photo of station dock from streetsblog.org.</p><p style="text-align:center;margin:2em;"><a href="http://openplans.org/"><img src="images/openplans-logo-gray.gif" /></a></p>');
+		this.aboutWidget.setContent(aboutCopy);
 		this.aboutWidget.hide();
 
     },

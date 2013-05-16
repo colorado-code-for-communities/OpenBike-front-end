@@ -32,10 +32,10 @@ otp.core.Webapp = {
         
         // Init AddThis
         addthis_config = {
-		     pubid: "ra-4fb549f217255a7d",
+		     pubid: "ra-512e79c108c2b542",
 		     data_track_clickback: false
 		};
-		$.getScript("http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4fb549f217255a7d");
+		$.getScript("http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-512e79c108c2b542");
 		
 		if(window.location.hash !== "")
 			otp.util.DataStorage.retreive(window.location.hash.replace("#", ""), this);
@@ -89,7 +89,7 @@ otp.core.Webapp = {
     	window.location.hash = this.currentHash;
     	
         var shareRoute = $("#share-route");
-        shareRoute.find(".addthis_toolbox").attr("addthis:url", "http://cibi.me/#"+this.currentHash);
+        shareRoute.find(".addthis_toolbox").attr("addthis:url", "http://openbike.co/#"+this.currentHash);
         addthis.toolbox(".addthis_toolbox_route");
     },
     

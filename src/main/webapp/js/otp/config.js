@@ -7,30 +7,37 @@ if(typeof(otp.config) == "undefined" || otp.config == null) otp.config = {};
 // step 2: create an object of default otp.config default values (see step3 where we apply this to any existing config)
 otp.config = {
 
-    hostname : "http://cibi.me",
+    hostname : "http://ec2-54-234-135-182.compute-1.amazonaws.com:8080",
     //routerId : <id>,
     
     
     // default cloudmade tiles:
-    // tileUrl : 'http://{s}.tiles.mapbox.com/v3/mapbox.mapbox-streetis/{z}/{x}/{y}.png',
+    //tileUrl : 'http://{s}.tiles.mapbox.com/v3/mapbox.mapbox-streetis/{z}/{x}/{y}.png',
     // tileAttrib : 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade',
 
     // devseed tiles (DC only) & tile URL function override:
-    tileUrl : 'http://{s}.tiles.mapbox.com/v3/openplans.map-g4j0dszr,openplans.nyc_bike_overlay/{z}/{x}/{y}.png',
+    //tileUrl : 'http://{s}.tiles.mapbox.com/v3/openplans.map-g4j0dszr,openplans.nyc_bike_overlay/{z}/{x}/{y}.png',
     //overlayTileUrl : 'http://{s}.tiles.mapbox.com/v3/intertwine.nyc_bike_overlay/{z}/{x}/{y}.png',
-    tileAttrib : 'Routing powered by <a href="http://opentripplanner.org/">OpenTripPlanner</a>, Map tiles from MapBox (<a href="http://mapbox.com/about/maps/">terms</a>) and OpenStreetMap ',
-    initLatLng : new L.LatLng(40.719298,-73.999743), // NYC
-    initZoom : 14,
-    minZoom : 13,
+    //tileAttrib : 'RoutitileUrl : 'http://{s}.tiles.mapbox.com/v3/openplans.map-g4j0dszr,openplans.nyc_bike_overlay/{z}/{x}/{y}.png',
+    // tileUrl : 'http://{s}.tiles.mapbox.com/v3/mikelockz.map-6eilr7nc/{z}/{x}/{y}.png',
+    // Daytime theme
+    tileUrl : 'http://{s}.tiles.mapbox.com/v3/mikelockz.map-sxf48nmk/{z}/{x}/{y}.png',
+    // Nightime theme
+    // tileUrl : 'http://{s}.tiles.mapbox.com/v3/mikelockz.map-fvoz9mpk/{z}/{x}/{y}.png',
+    tileAttrib : 'Routing powered by <a href="http://opentripplanner.org/">OpenTripPlanner</a>, Map tiles from MapBox (<a href="http://mapbox.com/about/maps/">terms</a>) and OpenStreetMap, Based on <a href="http://cibi.me">CiBi.me</a>',
+    initLatLng : new L.LatLng(39.752865,-104.970245), // Denver
+    initZoom : 13,
+    minZoom : 11,
     maxZoom : 17,
 
-    loggerUrl : 'http://cibi.me/cibi/log',
-    dataStorageUrl : 'http://cibi.me/cibi/data', 
+    loggerUrl : 'http://openbike.co/log',
+    dataStorageUrl : 'http://openbike.co/data', 
     
     CLASS_NAME : "otp.config"
 };
+console.log('Using host: ' + otp.config.hostname);
 
-/*
+
 // step 3: apply our default to the existing (possibly empty) otp config
 try {
     otp.inherit(otp.config, otp.config_defaults);       // step 3a: build the object up
@@ -38,4 +45,4 @@ try {
     console.log("otp.config updated with default items from otp.config_defaults");
 } catch(e) {
     console.log("ERROR: was unable to run otp.inherit override in config.js - got this exception: " + e);
-}*/
+}
